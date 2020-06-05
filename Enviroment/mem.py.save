@@ -1,0 +1,26 @@
+import psutil as ps
+import sys
+
+# var1: turn on mem control
+# var2: mem usage by percent (default is 70% can use)
+mem_f = False
+mem_per_f == False
+mem_per = False
+try:
+	mem_per_f == True
+	mem_per == sys.argv[2] #  get variable
+except:
+	mem_per == 70
+
+if mem_f == True:
+	if mem_per >= int(100 - ps.virtual_memory().percent):
+		warning()
+	else:
+		pass 
+elif mem_f == False:
+	if mem_per >= int(100 - ps.virtual_memory().percent):
+		warning()
+	else:
+		pass
+if __name__ == "__main__":
+	mem_setting()
